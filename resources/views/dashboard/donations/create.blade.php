@@ -46,8 +46,8 @@
                                 <form class="form" action="{{route('donations.store')}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="name" class="form-label">{{trans('admin.name')}}</label>
-                                            <input value="{{ old('name') }}" type="text" class="form-control" name="name" placeholder="{{trans('admin.name')}}">
+                                            <label for="name" class="form-label">{{trans('admin.description')}}</label>
+                                            <input value="{{ old('name') }}" type="text" class="form-control" name="name" placeholder="{{trans('admin.description')}}">
 
                                             @if ($errors->has('name'))
                                             <span class="text-danger text-left">{{ $errors->first('name') }}</span>

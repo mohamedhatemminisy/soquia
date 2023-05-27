@@ -27,13 +27,13 @@
                                 @csrf
 
                                 <fieldset class="form-group position-relative has-icon-left mb-0">
-                                    <input type="text" name="email" class="form-control form-control-lg input-lg"
-                                           value="" id="email" placeholder="@lang('admin.email')">
+                                    <input type="text" name="phone" class="form-control form-control-lg input-lg"
+                                           value="" id="phone" placeholder="@lang('admin.phone')">
                                     <div class="form-control-position">
                                         <i class="ft-user"></i>
                                     </div>
 
-                                    @error('email')
+                                    @error('phone')
                                      <span class="text-danger">{{$message}}</span>
                                      @enderror
                                 </fieldset>

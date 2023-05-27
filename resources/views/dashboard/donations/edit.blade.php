@@ -42,12 +42,12 @@
                             @include('dashboard.includes.alerts.errors')
                             <div class="card-content collapse show">
                                 <div class="card-body">
-                                    <form method="post" action="{{ route('donations.update', $donation->id) }}">
+                                    <form method="post" action="{{ route('donations.update', $donation->id) }}"  enctype="multipart/form-data">
                                         @method('patch')
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="name" class="form-label">{{trans('admin.name')}}</label>
-                                            <input value="{{ $donation->name }}" type="text" class="form-control" name="name" placeholder="name">
+                                            <label for="name" class="form-label">{{trans('admin.description')}}</label>
+                                            <input value="{{ $donation->name }}" type="text" class="form-control" name="name" placeholder="description">
 
                                             @if ($errors->has('name'))
                                             <span class="text-danger text-left">{{ $errors->first('name') }}</span>

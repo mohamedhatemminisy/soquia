@@ -21,7 +21,11 @@ class DonatiorRequest extends FormRequest
      */
     public function rules(): array
     {
-            $files = request()->isMethod('PATCH') ? 'nullable' : 'required|array|min:1|mimes:jpeg,jpg,png,gif,svg|max:8000';
+            $files = request()->isMethod('PATCH') ? 'nullable' : [
+                'required',
+                'array',
+                'min:1',
+                'max:8000'];
 
         return [
             'start_date' => 'required|date|before:end_date',

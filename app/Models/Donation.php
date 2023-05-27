@@ -34,6 +34,12 @@ class Donation extends Model
     {
         return $this->belongsTo(Party::class, 'party_id');
     }
+    
+    public function files()
+    {
+        return $this->hasMany(DonationFile::class);
+    }
+
 }
 
 

@@ -96,6 +96,8 @@ return [
     'donator' => 'المتبرع',
     'party' => 'جهة الصرف',
     'error_message' => [
+        'email_unique'          => 'البريد الالكتروني مسجل من قبل',
+        'phone_unique'          => 'الهاتف مسجل من قبل',
         'slug_unique'           =>  'هذا الاسم موجود من قبل',
         'phone_required'        =>  'رقم الهاتف مطلوب',
         'name_required'         =>  'الاسم مطلوب',

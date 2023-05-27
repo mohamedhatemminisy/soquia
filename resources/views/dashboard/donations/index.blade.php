@@ -44,7 +44,7 @@
                                   <table class="table display nowrap table-striped table-bordered w-100">
                                         <thead>
                                             <tr>
-                                                <th> {{trans('admin.name')}} </th>
+                                                <th> {{trans('admin.description')}} </th>
                                                 <th> {{trans('admin.action')}}</th>
                                             </tr>
                                         </thead>

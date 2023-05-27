@@ -25,7 +25,7 @@ class StoreUserRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'nullable|email|unique:users,email',
             'phone' => 'required|unique:users,phone',
             'password' => 'required',
         ];
@@ -37,6 +37,8 @@ class StoreUserRequest extends FormRequest
             'email.required' =>  trans('admin.error_message.email_required'),
             'name.required' =>  trans('admin.error_message.name_required'),
             'phone.required' =>  trans('admin.error_message.phone_required'),
+            'email.unique' =>  trans('admin.error_message.email_unique'),
+            'phone.unique' =>  trans('admin.error_message.phone_unique'),
             'password.required' =>  trans('admin.error_message.password_required'),
         ];
    

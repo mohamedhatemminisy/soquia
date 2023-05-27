@@ -40,7 +40,7 @@
                             <div class="card-body">
                                 <div class="tab-content">
                                     <div class="col form-group">
-                                        <label>@lang('admin.name') </label>
+                                        <label>@lang('admin.description') </label>
                                         <p class="alert  ">
                                             {{ $donation->name  }}
                                         </p>
@@ -93,6 +93,17 @@
                                             {{ $donation->party->name  }}
                                         </p>
                                     </div><hr>
+                                    @if($donation->files)
+                                    <div class="col form-group">
+                                        <label>@lang('admin.files') </label>
+                                        <p>
+                                            @foreach($donation->files as $file)
+                                            <img src="{{asset($file->file)}}" style="width:200px;height:200px;cursor:pointer" onclick="window.open('{{ asset($file->file) }}')">
+                                            @endforeach
+                                        </p>
+                                    </div>
+                                    @endif
+                                    
                                 </div>
                             </div>
                         </div>

@@ -22,8 +22,7 @@ class LoginController extends Controller
 
         $remember_me = $request->has('remember_me') ? true : false;
 
-        if (Auth::attempt(['email' =>  $request->input("email"), 'password' =>  $request->input("password")])) {
-
+        if (Auth::attempt(['phone' => $request->input('phone'), 'password' => $request->input('password')])) {
             return redirect()->route('admin.dashboard');
         }
         return redirect()->back()->with(['error' => trans('admin.wrong_data')]);

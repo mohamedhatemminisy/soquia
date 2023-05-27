@@ -96,6 +96,8 @@ return [
     'donator' => 'donator',
     'party' => 'party',
     'error_message' => [
+        'email_unique'          => 'email must be unique',
+        'phone_unique'          => 'phone must be unique',
         'slug_unique'           =>  'slug must be unique',
         'phone_required'        =>  'phone is required',
         'name_required'         =>  'Name is required',

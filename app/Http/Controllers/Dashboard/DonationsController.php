@@ -17,7 +17,13 @@ class DonationsController extends Controller
      */
     public function index()
     {
-        $donations = Donation::latest()->paginate(PAGINATION_COUNT);
+        $user = auth()->user();
+        $role =  $user->getRoleNames()[0];
+        if($role  == 'donatior'){
+            $donations = Donation::latest()->where('donator_id', auth()->user()->id)->paginate(PAGINATION_COUNT);
+        }elseif($role == 'super_admin'){
+            $donations = Donation::latest()->paginate(PAGINATION_COUNT);
+        }
         return view('dashboard.donations.index', compact('donations'));
     }
 

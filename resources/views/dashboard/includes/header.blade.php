@@ -9,8 +9,8 @@
                 <li class="nav-item">
                     <a class="navbar-brand" href="{{ route('home') }}">
                         <img class="brand-logo" alt="modern admin logo"
-                             src="{{asset('assets/admin/images/logo/logo.png')}}">
-                        <h3 class="brand-text">3d Carving</h3>
+                             src="{{asset('assets/admin/logo.jpg')}}">
+                        <h3 class="brand-text">سقيا الماء</h3>
                     </a>
                 </li>
                 <li class="nav-item d-md-none">
